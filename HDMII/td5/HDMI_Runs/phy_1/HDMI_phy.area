@@ -1,0 +1,82 @@
+standard
+***Report Model: hdmi_tx_display Device: EG4S20BG256***
+
+IO Statistics
+#IO                         7
+  #input                    2
+  #output                   5
+  #inout                    0
+
+Utilization Statistics
+#lut                      458   out of  19600    2.34%
+#reg                      200   out of  19600    1.02%
+#le                       507
+  #lut only               307   out of    507   60.55%
+  #reg only                49   out of    507    9.66%
+  #lut&reg                151   out of    507   29.78%
+#dsp                        0   out of     29    0.00%
+#bram                       0   out of     64    0.00%
+  #bram9k                   0
+  #fifo9k                   0
+#bram32k                    0   out of     16    0.00%
+#pad                       11   out of    188    5.85%
+  #ireg                     0
+  #oreg                     5
+  #treg                     0
+#pll                        1   out of      4   25.00%
+#gclk                       1   out of     16    6.25%
+
+Clock Resource Statistics
+Index     ClockNet                    Type               DriverType         Driver                         Fanout
+#1        ux_hdmi/PXLCLK_I            GCLK               pll                inst/pll_inst.clkc1            90
+#2        ux_hdmi/PXLCLK_5X_I         GCLK               pll                inst/pll_inst.clkc2            35
+#3        FPGA_SYS_50M_CLK_P_dup_1    GCLK               io                 FPGA_SYS_50M_CLK_P_syn_2.di    5
+#4        inst/clk0_buf               GCLK               pll                inst/pll_inst.clkc0            0
+
+
+Detailed IO Report
+
+         Name           Direction    Location    IOStandard    DriveStrength    PullType    PackReg  
+  FPGA_SYS_50M_CLK_P      INPUT         R7        LVCMOS33          N/A          PULLUP      NONE    
+      display_on          INPUT         A9        LVCMOS33          N/A          PULLUP      NONE    
+      HDMI_CLK_P         OUTPUT         P4         LVDS33           NA            NONE      ODDRX1   
+    HDMI_CLK_P(n)        OUTPUT         N4         LVDS33           NA            NONE      ODDRX1   
+      HDMI_D0_P          OUTPUT         J3         LVDS33           NA            NONE      ODDRX1   
+     HDMI_D0_P(n)        OUTPUT         J4         LVDS33           NA            NONE      ODDRX1   
+      HDMI_D1_P          OUTPUT         N1         LVDS33           NA            NONE      ODDRX1   
+     HDMI_D1_P(n)        OUTPUT         M1         LVDS33           NA            NONE      ODDRX1   
+      HDMI_D2_P          OUTPUT         P1         LVDS33           NA            NONE      ODDRX1   
+     HDMI_D2_P(n)        OUTPUT         R1         LVDS33           NA            NONE      ODDRX1   
+         LED             OUTPUT        B15        LVCMOS33           8            NONE       OREG    
+
+Report Hierarchy Area:
++-------------------------------------------------------------------------------------------------------------+
+|Instance                           |Module              |le     |lut     |ripple  |seq     |bram    |dsp     |
++-------------------------------------------------------------------------------------------------------------+
+|top                                |hdmi_tx_display     |507    |348     |110     |205     |0       |0       |
+|  inst                             |tx_pll              |1      |1       |0       |0       |0       |0       |
+|  ux_hdmi                          |hdmi_top            |456    |329     |100     |168     |0       |0       |
+|    u3_hdmi_tx                     |hdmi_tx             |301    |237     |38      |137     |0       |0       |
+|      Inst_DVITransmitter          |DVITransmitter      |301    |237     |38      |137     |0       |0       |
+|        Inst_TMDSEncoder_blue      |TMDSEncoder         |88     |73      |14      |27      |0       |0       |
+|        Inst_TMDSEncoder_green     |TMDSEncoder         |79     |66      |12      |30      |0       |0       |
+|        Inst_TMDSEncoder_red       |TMDSEncoder         |79     |66      |12      |26      |0       |0       |
+|        Inst_blue_serializer_10_1  |Serial_N_1_lvds_dat |20     |12      |0       |19      |0       |0       |
+|        Inst_clk_serializer_10_1   |Serial_N_1_lvds     |7      |2       |0       |7       |0       |0       |
+|        Inst_green_serializer_10_1 |Serial_N_1_lvds_dat |14     |10      |0       |14      |0       |0       |
+|        Inst_red_serializer_10_1   |Serial_N_1_lvds_dat |14     |8       |0       |14      |0       |0       |
+|    vga_ctrl_inst                  |vga_ctrl            |143    |80      |62      |22      |0       |0       |
+|    vga_pic_inst                   |vga_pic             |12     |12      |0       |9       |0       |0       |
++-------------------------------------------------------------------------------------------------------------+
+
+
+DataNet Average Fanout:
+
+   Index     Fanout    Nets  
+    #1         1       391   
+    #2         2        25   
+    #3         3        9    
+    #4         4        15   
+    #5        5-10      76   
+    #6       11-50      13   
+  Average     2.42           

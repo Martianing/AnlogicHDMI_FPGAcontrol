@@ -1,0 +1,48 @@
+standard
+***Report Model: hdmi_tx_display Device: EG4S20BG256***
+
+IO Statistics
+#IO                         7
+  #input                    2
+  #output                   5
+  #inout                    0
+
+Gate Statistics
+#Basic gates              343
+  #and                     37
+  #nand                     0
+  #or                      25
+  #nor                      0
+  #xor                      8
+  #xnor                    13
+  #buf                      0
+  #not                     37
+  #bufif1                   0
+  #MX21                    16
+  #FADD                     0
+  #DFF                    207
+  #LATCH                    0
+#MACRO_ADD                103
+#MACRO_EQ                  11
+#MACRO_MUX                129
+#MACRO_OTHERS               5
+
+Report Hierarchy Area:
++--------------------------------------------------------------------------------+
+|Instance                           |Module              |gates  |seq    |macros |
++--------------------------------------------------------------------------------+
+|top                                |hdmi_tx_display     |136    |207    |119    |
+|  inst                             |tx_pll              |0      |0      |1      |
+|  ux_hdmi                          |hdmi_top            |135    |175    |116    |
+|    u3_hdmi_tx                     |hdmi_tx             |98     |144    |86     |
+|      Inst_DVITransmitter          |DVITransmitter      |98     |144    |86     |
+|        Inst_TMDSEncoder_blue      |TMDSEncoder         |34     |33     |27     |
+|        Inst_TMDSEncoder_green     |TMDSEncoder         |31     |30     |28     |
+|        Inst_TMDSEncoder_red       |TMDSEncoder         |29     |26     |27     |
+|        Inst_blue_serializer_10_1  |Serial_N_1_lvds_dat |2      |20     |1      |
+|        Inst_clk_serializer_10_1   |Serial_N_1_lvds     |2      |7      |1      |
+|        Inst_green_serializer_10_1 |Serial_N_1_lvds_dat |0      |14     |1      |
+|        Inst_red_serializer_10_1   |Serial_N_1_lvds_dat |0      |14     |1      |
+|    vga_ctrl_inst                  |vga_ctrl            |6      |24     |13     |
+|    vga_pic_inst                   |vga_pic             |31     |7      |17     |
++--------------------------------------------------------------------------------+

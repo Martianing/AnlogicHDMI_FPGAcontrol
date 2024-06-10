@@ -1,0 +1,51 @@
+standard
+***Report Model: hdmi_tx_display Device: EG4S20BG256***
+
+IO Statistics
+#IO                         7
+  #input                    2
+  #output                   5
+  #inout                    0
+
+LUT Statistics
+#Total_luts               477
+  #lut4                   187
+  #lut5                    55
+  #lut6                     0
+  #lut5_mx41                0
+  #lut4_alu1b             235
+
+Utilization Statistics
+#lut                      477   out of  19600    2.43%
+#reg                      205   out of  19600    1.05%
+#le                         0
+#dsp                        0   out of     29    0.00%
+#bram                       0   out of     64    0.00%
+  #bram9k                   0
+  #fifo9k                   0
+#bram32k                    0   out of     16    0.00%
+#pad                       11   out of    188    5.85%
+  #ireg                     0
+  #oreg                     5
+  #treg                     0
+#pll                        1   out of      4   25.00%
+
+Report Hierarchy Area:
++-----------------------------------------------------------------------------------------------------+
+|Instance                           |Module              |lut     |ripple  |seq     |bram    |dsp     |
++-----------------------------------------------------------------------------------------------------+
+|top                                |hdmi_tx_display     |242     |235     |210     |0       |0       |
+|  inst                             |tx_pll              |1       |0       |0       |0       |0       |
+|  ux_hdmi                          |hdmi_top            |233     |201     |173     |0       |0       |
+|    u3_hdmi_tx                     |hdmi_tx             |195     |60      |142     |0       |0       |
+|      Inst_DVITransmitter          |DVITransmitter      |195     |60      |142     |0       |0       |
+|        Inst_TMDSEncoder_blue      |TMDSEncoder         |56      |20      |33      |0       |0       |
+|        Inst_TMDSEncoder_green     |TMDSEncoder         |59      |20      |29      |0       |0       |
+|        Inst_TMDSEncoder_red       |TMDSEncoder         |52      |20      |25      |0       |0       |
+|        Inst_blue_serializer_10_1  |Serial_N_1_lvds_dat |10      |0       |20      |0       |0       |
+|        Inst_clk_serializer_10_1   |Serial_N_1_lvds     |2       |0       |7       |0       |0       |
+|        Inst_green_serializer_10_1 |Serial_N_1_lvds_dat |8       |0       |14      |0       |0       |
+|        Inst_red_serializer_10_1   |Serial_N_1_lvds_dat |8       |0       |14      |0       |0       |
+|    vga_ctrl_inst                  |vga_ctrl            |18      |141     |24      |0       |0       |
+|    vga_pic_inst                   |vga_pic             |12      |0       |7       |0       |0       |
++-----------------------------------------------------------------------------------------------------+

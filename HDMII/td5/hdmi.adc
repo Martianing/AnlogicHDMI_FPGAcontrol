@@ -1,0 +1,9 @@
+set_pin_assignment	{ FPGA_SYS_50M_CLK_P }	{ LOCATION = R7; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; }
+set_pin_assignment	{ HDMI_CLK_P }	{ LOCATION = P4; IOSTANDARD = LVDS33; }
+set_pin_assignment	{ HDMI_D0_P }	{ LOCATION = J3; IOSTANDARD = LVDS33; }
+set_pin_assignment	{ HDMI_D1_P }	{ LOCATION = N1; IOSTANDARD = LVDS33; }
+set_pin_assignment	{ HDMI_D2_P }	{ LOCATION = P1; IOSTANDARD = LVDS33; }
+set_pin_assignment	{ LED }	{ LOCATION = B15; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment	{ display_on }	{ LOCATION = A9; IOSTANDARD = LVCMOS33;  }
+
+
